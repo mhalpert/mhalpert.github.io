@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mike Halpert - Product leader for AI commerce</title>
+<meta name="description" content="Mike Halpert is a product executive who pairs business judgment with hands-on AI building. Career history, selected projects, and writing.">
+<meta property="og:title" content="Mike Halpert - Product leader for AI commerce">
+<meta property="og:description" content="Product executive pairing executive judgment with hands-on AI building.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232d4a3e'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23faf8f4' font-family='Georgia,serif'>MH</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #faf8f4;
+    --ink: #1c1b18;
+    --ink-soft: #57534a;
+    --line: #e4ded2;
+    --accent: #2d4a3e;
+    --accent-warm: #b3542e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+  nav.site-nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250,248,244,0.9); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.site-nav .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 14px; padding-bottom: 14px;
+  }
+  .nav-name {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px;
+    color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
+  }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-links a {
+    color: var(--ink-soft); text-decoration: none; font-size: 14px; font-weight: 600;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  header.hero { padding: 72px 0 64px; }
+  .hero-grid { display: flex; gap: 48px; align-items: center; }
+  .hero-text { flex: 1; min-width: 0; }
+  .hero-photo {
+    flex: 0 0 auto; width: 200px; height: 200px; object-fit: cover;
+    border-radius: 20px; box-shadow: 0 10px 30px rgba(28,27,24,0.14);
+  }
+  .kicker {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent-warm); margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(38px, 6vw, 52px);
+    font-weight: 700; line-height: 1.05; letter-spacing: -0.025em;
+    margin-bottom: 24px;
+  }
+  .lede { font-size: 19px; line-height: 1.6; color: var(--ink-soft); max-width: 34em; }
+  .lede strong { color: var(--ink); font-weight: 700; }
+  .hero-links { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 999px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--paper); }
+  .btn-primary:hover { background: #233b31; }
+  .btn-ghost { border: 1px solid var(--line); color: var(--ink); background: transparent; }
+  .btn-ghost:hover { border-color: var(--ink); }
+
+  section { padding: 56px 0; border-top: 1px solid var(--line); scroll-margin-top: 60px; }
+  .section-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-soft); margin-bottom: 40px;
+  }
+
+  .role { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }
+  .role:first-of-type { border-top: none; padding-top: 0; }
+  .role .years { font-size: 14px; color: var(--ink-soft); padding-top: 4px; }
+  .role h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 2px; }
+  .role .org { font-size: 15px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+  .role p { font-size: 15.5px; color: var(--ink-soft); }
+  .role p .metric { color: var(--ink); font-weight: 700; }
+  .education { margin-top: 36px; font-size: 14.5px; color: var(--ink-soft); }
+  .education strong { color: var(--ink); font-weight: 700; }
+
+  .work-item { display: block; text-decoration: none; color: inherit; padding: 32px 0; border-top: 1px solid var(--line); }
+  .work-item:first-of-type { border-top: none; padding-top: 0; }
+  .work-item h3 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700;
+    letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 8px;
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  }
+  .work-item h3 .tag {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--accent); border-radius: 999px; padding: 3px 10px;
+  }
+  .work-item p { color: var(--ink-soft); max-width: 38em; }
+  .work-item .metric { color: var(--ink); font-weight: 700; }
+  a.work-item:hover h3 { color: var(--accent); }
+  .work-links { margin-top: 12px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .work-links a { font-size: 14px; font-weight: 600; color: var(--accent-warm); text-decoration: none; }
+  .work-links a:hover { text-decoration: underline; }
+  .work-media { margin-top: 20px; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 24px rgba(28,27,24,0.12); }
+  .work-media img { display: block; width: 100%; height: auto; }
+  .work-media.video { aspect-ratio: 16 / 9; background: #111; }
+  .work-media.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .work-body { display: flex; gap: 28px; align-items: flex-start; }
+  .work-body .work-text { flex: 1; min-width: 0; }
+  .work-thumb { flex: 0 0 auto; border-radius: 10px; box-shadow: 0 6px 18px rgba(28,27,24,0.12); }
+  .work-thumb.book { width: 108px; }
+  .work-thumb.app { width: 120px; border-radius: 18px; }
+
+  .resume-box {
+    background: var(--accent); color: var(--paper); border-radius: 16px;
+    padding: 48px 40px; text-align: center;
+  }
+  .resume-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 12px; }
+  .resume-box p { color: #cfd8d2; max-width: 30em; margin: 0 auto 28px; }
+  .resume-box .btn { background: var(--paper); color: var(--accent); font-weight: 700; }
+  .resume-box .btn:hover { background: #fff; }
+
+  footer { padding: 48px 0 64px; border-top: 1px solid var(--line); }
+  footer .foot-links { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+  footer a { color: var(--ink-soft); text-decoration: none; font-size: 14.5px; font-weight: 600; }
+  footer a:hover { color: var(--accent); }
+  footer .fine { font-size: 13px; color: var(--ink-soft); }
+
+  @media (max-width: 560px) {
+    header.hero { padding: 48px 0 48px; }
+    .hero-grid { flex-direction: column-reverse; gap: 36px; align-items: flex-start; }
+    .hero-photo { width: 148px; height: 148px; border-radius: 16px; }
+    .role { grid-template-columns: 1fr; gap: 4px; }
+    .resume-box { padding: 36px 24px; }
+    .work-thumb.book { width: 84px; }
+    .work-thumb.app { width: 92px; border-radius: 14px; }
+    .nav-links { gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-name" href="#top">Mike Halpert</a>
+    <div class="nav-links">
+      <a href="#career">Career</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="kicker">Mike Halpert</p>
+      <h1>Product leader for AI&nbsp;commerce.</h1>
+      <p class="lede">I lead product at the executive level and still build with my own hands. <strong>Executive judgment on business, economics, and markets, paired with real depth in AI and agentic workflows.</strong> Currently Head of Product at Stylitics in New&nbsp;York.</p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="#resume">Request my resume</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/mikehalpert">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/mhalpert">GitHub</a>
+      </div>
+    </div>
+    <img class="hero-photo" src="mike.jpg" alt="Mike Halpert">
+  </div>
+</header>
+
+<section id="career">
+  <div class="wrap">
+    <p class="section-label">Career</p>
+
+    <div class="role">
+      <div class="years">2025&ndash;present</div>
+      <div>
+        <h3>Head of Product</h3>
+        <p class="org">Stylitics</p>
+        <p>Executive team member reporting to the CEO, leading three director-level PMs. Driving the company's agentic transformation and two new AI businesses: on-model imagery for enterprise retail brands (<span class="metric">zero to millions in under a year</span>, 12+ clients) and product-data enrichment. Clients include Nike, Macy's, and J.Crew.</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="years">2024</div>
+      <div>
+        <h3>Independent Product Consultant</h3>
+        <p class="org">Private engagements</p>
+        <p>Product strategy and execution consulting.</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="years">2021&ndash;24</div>
+      <div>
+        <h3>Head of Product Management</h3>
+        <p class="org">Thrasio</p>
+        <p>Led 15+ product and UX staff for a high-growth Amazon aggregator with 200+ brands and $1B+ sales. <span class="metric">Drove $100M+ in profitability gains</span> through automated pricing and elasticity models; cut manual brand-management work 25%.</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="years">2018&ndash;21</div>
+      <div>
+        <h3>Product Management Leader</h3>
+        <p class="org">Walmart E-Commerce / Jet.com</p>
+        <p>Led Flight Deck, the insights and productivity suite for 1,500+ merchandisers; oversaw 50 engineering, UX and data staff. <span class="metric">Delivered $50M+ in efficiency savings</span> and helped bring 2,500 brands to Walmart.com.</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="years">2016&ndash;17</div>
+      <div>
+        <h3>Senior Director, Product &amp; Digital Strategy</h3>
+        <p class="org">The Howard Hughes Corporation</p>
+        <p>Incubated a B2B predictive analytics business; built shopper insights on 4M+ visitors.</p>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="years">2013&ndash;15</div>
+      <div>
+        <h3>Product &amp; Business Strategy Consulting Lead</h3>
+        <p class="org">Huge</p>
+        <p>Consulting for clients including Morgan Stanley, Comcast, and QVC. Grew annual subscription sales $20M+ through e-commerce improvements and A/B testing.</p>
+      </div>
+    </div>
+
+    <p class="education"><strong>Education:</strong> USC Marshall (MBA, Finance &amp; Strategy) · NYU Tisch (BFA, Film &amp; Television Production)</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="section-label">Selected projects</p>
+
+    <a class="work-item" href="https://stylitics.com/products/ai-image-studio/">
+      <h3>AI Image Studio <span class="tag">Stylitics</span></h3>
+      <p>I lead product for Stylitics' AI imagery platform, built for enterprise retail brands. <span class="metric">$3M ARR within its first 12 months.</span></p>
+      <div class="work-media"><img src="stylitics-ai.jpg" alt="Gallery of AI-generated on-model fashion imagery, made with Stylitics AI" loading="lazy"></div>
+      <div class="work-links"><span class="work-link" style="font-size:14px;font-weight:600;color:var(--accent-warm);">stylitics.com →</span></div>
+    </a>
+
+    <div class="work-item">
+      <h3>PodSized <span class="tag">Solo build</span></h3>
+      <p>An AI podcast summarization app that helps users learn key insights from podcasts when they don't have time to listen to long episodes. I designed, built, and launched it myself.</p>
+      <div class="work-links">
+        <a href="https://podsized.io">Website →</a>
+        <a href="https://apps.apple.com/us/app/podsized-ai-podcast-summaries/id6737673525">App Store →</a>
+        <a href="https://play.google.com/store/apps/details?id=io.podsized.android">Google Play →</a>
+      </div>
+      <div class="work-media video">
+        <iframe src="https://www.youtube-nocookie.com/embed/K9PO5sUJjo8?rel=0" title="PodSized launch video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <h3>Settle Up Poker <span class="tag">Solo build</span></h3>
+      <p>A tool for helping people settle up at the end of the night when they're playing home games.</p>
+      <div class="work-links">
+        <a href="https://settleup.games">Website →</a>
+        <a href="https://apps.apple.com/us/app/settle-up-poker/id6757622228">App Store →</a>
+      </div>
+    </div>
+
+    <a class="work-item" href="https://firstjoboutofcollege.com">
+      <div class="work-body">
+        <div class="work-text">
+          <h3>Cubicle to Corner Office <span class="tag">Book</span></h3>
+          <p><span class="metric">Author.</span> <em>Cubicle to Corner Office: The Ultimate Survival Guide to Your First Job</em>. Practical advice for people starting their careers.</p>
+          <div class="work-links"><span style="font-size:14px;font-weight:600;color:var(--accent-warm);">firstjoboutofcollege.com →</span></div>
+        </div>
+        <img class="work-thumb book" src="book-cover.jpg" alt="Cubicle to Corner Office book cover" loading="lazy">
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="wrap">
+    <div class="resume-box">
+      <h2>Want the full resume?</h2>
+      <p>Send a request and I'll get back to you with the current version.</p>
+      <a class="btn" href="mailto:mhalpert@gmail.com?subject=Resume%20request%20from%20your%20website&body=Hi%20Mike%2C%0A%0AI%27d%20like%20to%20see%20your%20resume.%0A%0ARole%20I%27m%20reaching%20out%20about%3A%0A%0AThanks!">Request my resume</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/mikehalpert">LinkedIn</a>
+      <a href="https://github.com/mhalpert">GitHub</a>
+      <a href="https://podsized.io">PodSized</a>
+      <a href="https://settleup.games">Settle Up Poker</a>
+      <a href="https://firstjoboutofcollege.com">Book</a>
+    </div>
+    <p class="fine">© 2026 Mike Halpert · New York</p>
+  </div>
+</footer>
+
+</body>
+</html>
