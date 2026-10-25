@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.className+=" js"</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mike Halpert - Product leader for AI commerce</title>
@@ -11,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232d4a3e'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23faf8f4' font-family='Georgia,serif'>MH</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --paper: #faf8f4;
@@ -26,7 +27,7 @@
   body {
     background: var(--paper);
     color: var(--ink);
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Instrument Sans', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 17px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -43,7 +44,7 @@
     padding-top: 14px; padding-bottom: 14px;
   }
   .nav-name {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px;
+    font-family: 'Bricolage Grotesque', 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px;
     color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
   }
   .nav-links { display: flex; gap: 22px; }
@@ -64,7 +65,7 @@
     text-transform: uppercase; color: var(--accent-warm); margin-bottom: 20px;
   }
   h1 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Bricolage Grotesque', 'Space Grotesk', sans-serif;
     font-size: clamp(38px, 6vw, 52px);
     font-weight: 700; line-height: 1.05; letter-spacing: -0.025em;
     margin-bottom: 24px;
@@ -92,7 +93,7 @@
   .role { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }
   .role:first-of-type { border-top: none; padding-top: 0; }
   .role .years { font-size: 14px; color: var(--ink-soft); padding-top: 4px; }
-  .role h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 2px; }
+  .role h3 { font-family: 'Bricolage Grotesque', 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 2px; }
   .role .org { font-size: 15px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
   .role p { font-size: 15.5px; color: var(--ink-soft); }
   .role p .metric { color: var(--ink); font-weight: 700; }
@@ -102,12 +103,12 @@
   .work-item { display: block; text-decoration: none; color: inherit; padding: 32px 0; border-top: 1px solid var(--line); }
   .work-item:first-of-type { border-top: none; padding-top: 0; }
   .work-item h3 {
-    font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700;
+    font-family: 'Bricolage Grotesque', 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700;
     letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 8px;
     display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
   }
   .work-item h3 .tag {
-    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700;
+    font-family: 'Instrument Sans', 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 700;
     letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
     border: 1px solid var(--accent); border-radius: 999px; padding: 3px 10px;
   }
@@ -131,7 +132,7 @@
     background: var(--accent); color: var(--paper); border-radius: 16px;
     padding: 48px 40px; text-align: center;
   }
-  .resume-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 12px; }
+  .resume-box h2 { font-family: 'Bricolage Grotesque', 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 12px; }
   .resume-box p { color: #cfd8d2; max-width: 30em; margin: 0 auto 28px; }
   .resume-box .btn { background: var(--paper); color: var(--accent); font-weight: 700; }
   .resume-box .btn:hover { background: #fff; }
@@ -164,9 +165,52 @@
     .work-thumb.app { width: 92px; border-radius: 14px; }
     .nav-links { gap: 14px; }
   }
+
+/* v2 layer: restrained motion, all gated by reduced-motion */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--accent-warm);z-index:20}
+header.hero{position:relative;overflow:hidden}
+header.hero::before{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(179,84,46,.14),rgba(179,84,46,0));pointer-events:none}
+header.hero::after{content:"";position:absolute;left:-160px;bottom:-200px;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(45,74,62,.12),rgba(45,74,62,0));pointer-events:none}
+.hero-grid{position:relative;z-index:1}
+h1{font-weight:800;font-size:clamp(40px,6.2vw,56px);line-height:1.02}
+h1{text-wrap:balance}
+h1 em{font-style:normal;color:var(--accent-warm)}
+.nav-links a{position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent-warm);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--ink)}
+.timeline{position:relative}
+.timeline::before{content:"";position:absolute;left:131px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline .tl-fill{position:absolute;left:131px;top:6px;width:2px;height:0;background:var(--accent)}
+.role{position:relative;transition:background .2s ease}
+.role::before{content:"";position:absolute;left:126px;top:30px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent);transition:background .2s ease,transform .2s ease}
+.role:first-of-type::before{top:8px}
+.role:hover::before{background:var(--accent-warm);border-color:var(--accent-warm);transform:scale(1.2)}
+.role>div:last-child{padding-left:28px}
+.work-item{transition:transform .25s ease}
+a.work-item:hover{transform:translateX(4px)}
+.work-media{transition:transform .35s ease,box-shadow .35s ease}
+.work-media:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(28,27,24,.18)}
+.work-item h3 .tag{background:rgba(45,74,62,.06)}
+.hero-photo{transition:transform .4s ease}
+.hero-photo:hover{transform:rotate(-2deg) scale(1.02)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-warm);outline-offset:3px}
+@media (max-width:560px){.timeline::before,.timeline .tl-fill{left:5px}.role::before{left:0;top:30px}.role:first-of-type::before{top:8px}.role>div:last-child{padding-left:26px}.role .years{padding-left:26px}}
+@media (prefers-reduced-motion:no-preference){
+ .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+ .js .reveal.in{opacity:1;transform:none}
+ .js .hero-text>*{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+ .js .hero-text>*:nth-child(2){animation-delay:.08s}.js .hero-text>*:nth-child(3){animation-delay:.16s}.js .hero-text>*:nth-child(4){animation-delay:.24s}
+ .js .hero-photo{opacity:0;animation:rise .9s .2s cubic-bezier(.2,.7,.2,1) forwards}
+ header.hero::before{animation:drift 14s ease-in-out infinite alternate}
+ @keyframes rise{to{opacity:1;transform:none}}
+ @keyframes drift{to{transform:translate(-30px,24px)}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress{display:none}}
 </style>
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <nav class="site-nav">
   <div class="wrap">
@@ -183,7 +227,7 @@
   <div class="wrap hero-grid">
     <div class="hero-text">
       <p class="kicker">Mike Halpert</p>
-      <h1>Product leader for AI&nbsp;commerce.</h1>
+      <h1>Product leader for <em>AI&nbsp;commerce.</em></h1>
       <p class="lede">I lead product at the executive level and still build with my own hands. <strong>Executive judgment on business, economics, and markets, paired with real depth in AI and agentic workflows.</strong> Currently Head of Product at Stylitics in New&nbsp;York.</p>
       <div class="hero-links">
         <a class="btn btn-primary" href="#resume">Request my resume</a>
@@ -198,8 +242,9 @@
 <section id="career">
   <div class="wrap">
     <p class="section-label">Career</p>
+<div class="timeline" id="timeline"><div class="tl-fill" id="tl-fill"></div>
 
-    <div class="role">
+    <div class="role reveal">
       <div class="years">2025&ndash;present</div>
       <div>
         <h3>Head of Product</h3>
@@ -208,7 +253,7 @@
       </div>
     </div>
 
-    <div class="role">
+    <div class="role reveal">
       <div class="years">2024</div>
       <div>
         <h3>Independent Product Consultant</h3>
@@ -217,7 +262,7 @@
       </div>
     </div>
 
-    <div class="role">
+    <div class="role reveal">
       <div class="years">2021&ndash;24</div>
       <div>
         <h3>Head of Product Management</h3>
@@ -226,7 +271,7 @@
       </div>
     </div>
 
-    <div class="role">
+    <div class="role reveal">
       <div class="years">2018&ndash;21</div>
       <div>
         <h3>Product Management Leader</h3>
@@ -235,7 +280,7 @@
       </div>
     </div>
 
-    <div class="role">
+    <div class="role reveal">
       <div class="years">2016&ndash;17</div>
       <div>
         <h3>Senior Director, Product &amp; Digital Strategy</h3>
@@ -244,7 +289,7 @@
       </div>
     </div>
 
-    <div class="role">
+    <div class="role reveal">
       <div class="years">2013&ndash;15</div>
       <div>
         <h3>Product &amp; Business Strategy Consulting Lead</h3>
@@ -253,7 +298,8 @@
       </div>
     </div>
 
-    <p class="education"><strong>Education:</strong> USC Marshall (MBA, Finance &amp; Strategy) · NYU Tisch (BFA, Film &amp; Television Production)</p>
+    </div>
+<p class="education"><strong>Education:</strong> USC Marshall (MBA, Finance &amp; Strategy) · NYU Tisch (BFA, Film &amp; Television Production)</p>
   </div>
 </section>
 
@@ -261,14 +307,14 @@
   <div class="wrap">
     <p class="section-label">Selected projects</p>
 
-    <a class="work-item" href="https://stylitics.com/products/ai-image-studio/">
+    <a class="work-item reveal" href="https://stylitics.com/products/ai-image-studio/">
       <h3>AI Image Studio <span class="tag">Stylitics</span></h3>
       <p>I lead product for Stylitics' AI imagery platform, built for enterprise retail brands. <span class="metric">$3M ARR within its first 12 months.</span></p>
       <div class="work-media"><img src="stylitics-ai.jpg" alt="Gallery of AI-generated on-model fashion imagery, made with Stylitics AI" loading="lazy"></div>
       <div class="work-links"><span class="work-link" style="font-size:14px;font-weight:600;color:var(--accent-warm);">stylitics.com →</span></div>
     </a>
 
-    <div class="work-item">
+    <div class="work-item reveal">
       <h3>PodSized <span class="tag">Solo build</span></h3>
       <p>An AI podcast summarization app that helps users learn key insights from podcasts when they don't have time to listen to long episodes. I designed, built, and launched it myself.</p>
       <div class="work-links">
@@ -281,7 +327,7 @@
       </div>
     </div>
 
-    <div class="work-item">
+    <div class="work-item reveal">
       <h3>Settle Up Poker <span class="tag">Solo build</span></h3>
       <p>A tool for helping people settle up at the end of the night when they're playing home games.</p>
       <div class="work-links">
@@ -290,7 +336,7 @@
       </div>
     </div>
 
-    <a class="work-item" href="https://firstjoboutofcollege.com">
+    <a class="work-item reveal" href="https://firstjoboutofcollege.com">
       <div class="work-body">
         <div class="work-text">
           <h3>Cubicle to Corner Office <span class="tag">Book</span></h3>
@@ -305,7 +351,7 @@
 
 <section id="resume">
   <div class="wrap">
-    <div class="resume-box">
+    <div class="resume-box reveal">
       <h2>Get in touch</h2>
       <p>For roles, collaborations or a copy of my full resume, send a note here. It lands directly in my inbox.</p>
       <form id="contact-form">
@@ -338,6 +384,22 @@
   </div>
 </footer>
 
+
+<script>
+(function(){
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els=document.querySelectorAll('.reveal');
+if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(e){io.observe(e)})}
+var bar=document.getElementById('progress'),tl=document.getElementById('timeline'),fill=document.getElementById('tl-fill');
+var links=[].slice.call(document.querySelectorAll('.nav-links a')),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+function tick(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';
+if(tl){var r=tl.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));fill.style.height=(p*100)+'%'}
+var y=innerHeight*.35,cur=-1;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<y)cur=i});links.forEach(function(a,i){a.classList.toggle('active',i===cur)})}
+if(!rm){addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick)}else if(fill){fill.style.height='100%'}
+tick();
+})();
+</script>
 <script>
 document.getElementById('contact-form').addEventListener('submit', async function (e) {
   e.preventDefault();
